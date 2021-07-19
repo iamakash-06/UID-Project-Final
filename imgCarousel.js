@@ -1,6 +1,6 @@
-const carouselImages = document.querySelector('.carousel__images0');
+const carouselImages = document.querySelector('.carousel__images');
 const carouselButtons = document.querySelectorAll('.carousel__button');
-const numberOfImages = document.querySelectorAll('.carousel__images0 img').length;
+const numberOfImages = document.querySelectorAll('.carousel__images img').length;
 let imageIndex = 1;
 let translateX = 0;
 
