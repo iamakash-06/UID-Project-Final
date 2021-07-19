@@ -33,7 +33,7 @@ function purchaseClicked() {
         icon: "success",
         button: "YESSS",
       }).then(function(){
-          window.location = "merch.html"
+          window.location = "payment.html"
       });                                                                      //function to alert and removechild after purchase is clicked.
     var cartItems = document.getElementsByClassName('cart-items')[0];       
     while (cartItems.hasChildNodes()) {
