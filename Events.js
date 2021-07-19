@@ -46,7 +46,25 @@ function ondance() {
     document.getElementById("overlaywin").style.display = "none";
   }
 
-  function registrationpage()
-  {
-    window.open("registration.html",_blank);
+  function registrationpage(){
+    window.open("registration.html");
   }
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }  
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+
+
+
+                  
+
+              
+
+                  
+
+               
