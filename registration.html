@@ -4,83 +4,67 @@
 <head>
     <title>STUDENT REGISTRATION FORM</title>
     <script>
-       function submitForm()
+        function submitForm()
         {
             document.myForm.target = "_blank";
             window.open("payment.html");
             document.myForm.submit();
         }
-    </script>
-    <script>
-        function validateForm() {
-          let x = document.forms["myForm"]["fname"].value;
-          document.forms["myForm"]["fname"].style.borderColor = "red";
-          if (x == "") {
-            alert("Name must be filled out");
-            return false;
-          }
-          else{
-            document.forms["myForm"]["fname"].style.borderColor = "green";
-          }
-        }
-
-        function validateemail(){  
-            var x=document.forms["myForm"]["Email_ID"].value;  
-            var atposition=x.indexOf("@");  
-            var dotposition=x.lastIndexOf(".");  
-            if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
-                alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-                return false;  
-            }  
-        }  
-
-        function phonenumber(phone_no){
-            var phoneno = /^\d{10}$/;
-            if(phone_no.value.match(phoneno)){
-                return True;
-            }
-            else
-            {
-                alert("Please enter a valid 10 digit phone number");
+       
+        function validateForm() 
+        {
+            let x = document.forms["myForm"]["fname"].value;
+            document.forms["myForm"]["fname"].style.borderColor = "red";
+            if (x == "") {
+                alert("Name must be filled out");
                 return false;
             }
+            else{
+                document.forms["myForm"]["fname"].style.borderColor = "green";
+                var y=document.forms["myForm"]["Email_ID"].value;  
+                var atposition=y.indexOf("@");  
+                var dotposition=y.lastIndexOf(".");  
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=y.length){  
+                    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                    return false;  
+                }
+                else{
+                    var phoneno = /^\d{10}$/;
+                    if(phone_no.value.match(phoneno)){
+                        var a = /^[1-9][0-9]{5}$/;  
+                        if (pin.value.match(a))   
+                        {  
+                            return submitForm();
+                        }   
+                        else   
+                        {  
+                            alert("Your Entered Zip Code Is Not Valid.")  
+                        }  
+                
+                    }
+                    else
+                    {
+                        alert("Please enter a valid 10 digit phone number");
+                        return false;
+                
+
+                    }
+            }
+              
+            
+           
+            }
+            
         }
 
         
-        function validateImage() {
-            var formData = new FormData();
-
-            var file = document.getElementById("img").files[0];
-
-            formData.append("Filedata", file);
-            var t = file.type.split('/').pop().toLowerCase();
-            if (t != "jpeg" && t != "jpg" && t != "png" && t != "bmp" && t != "gif") {
-                alert('Please select a valid image file');
-                document.getElementById("img").value = '';
-                return false;
-            }
-            if (file.size > 1024000) {
-                alert('Max Upload size is 1MB only');
-                document.getElementById("img").value = '';
-                return false;
-            }
-            return true;
-        }
-        function CheckIndianZipCode(pin_code){  
-            var a = "^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$";  
-            if (a.test(pin_code))   
-            {  
-                alert("Your Entered Zip Code Is Valid.")  
-            }   
-            else   
-            {  
-            alert("Your Entered Zip Code Is Not Valid.")  
-            }  
-        };   
-</script>
         
 
+    
     </script>
+        
+
+    
     <style>
         input[type=text] {
             width: 100%;
@@ -241,7 +225,7 @@
     <marquee scrollamount="10"><img src="Reminiscence.png"></marquee> 
     <center>
 
-        <form name="myForm" onsubmit="return validateForm(),validateemail(),phonenumber(phone_no),validateImage(),CheckIndianZipCode(pin_code)" method="POST">
+        <form name="myForm" onsubmit="return validateForm()" method="POST">
             <!--<h2><u style="color:black">STUDENT REGISTRATION FORM</u></h2>-->
             <table id="table1" bgcolor="white">
                 <tr>
@@ -273,7 +257,7 @@
                 <tr>
                     <td style="width:12px;"> </td>
                     <td id='c1'>MOBILE NUMBER:</td>
-                    <td><input style="color: black;" type="text" name="phone_no" placeholder="10 digits number"></td>
+                    <td><input style="color: black;" type="text" id="phone_no" placeholder="10 digits number"></td>
                 </tr>
                 <tr>
                     <td style="width:12px;"> </td>
@@ -302,7 +286,7 @@
                 <tr>
                     <td style="width:12px;"> </td>
                     <td id='c1'>PIN CODE:</td>
-                    <td><input style="color: black;" type="text" name="pin_code"></td>
+                    <td><input style="color: black;" type="text" id="pin"></td>
                 </tr>
                 <tr>
                     <td style="width:12px;"> </td>
@@ -401,7 +385,7 @@
                 </tr>
             </table><br>
             <div>
-                <input type="submit" onclick="submitForm()"/>
+                <input type="submit">
                
                 <input type="reset" name="reset">
             </div>

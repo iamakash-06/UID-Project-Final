@@ -5,11 +5,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
   function submitForm()
-        {
+        { 
+          let x = document.forms["myForm"]["fname"].value;
+          document.forms["myForm"]["fname"].style.borderColor = "red";
+          if (x == "") {
+            window.alert("Name must be filled out");
+            //return false;
+          }
+          else{
+            document.forms["myForm"]["fname"].style.borderColor = "green";
+          }
+          var cvv_no = /^[0-9]{3}$/;
+          if(cvv.value.match(cvv_no)){
+            
             document.myForm.target = "_blank";
             window.open("paymentsuccess.html");
             document.myForm.submit();
+          }
+          else
+          {   
+            window.alert("Please enter a valid CVV");
+            return false;
+          }
+            
         }
+  
 </script>
 
 <style>
@@ -115,7 +135,7 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form name="myForm" action="/action_page.php">
+      <form name="myForm" onsubmit=" return submitForm()"action="/action_page.php">
       
         <div class="row">
           <div class="col-50">
@@ -172,7 +192,7 @@ span.price {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Confirm and Pay" class="btn" onclick="submitForm()"/>
+        <input type="submit" value="Confirm and Pay" class="btn" >
       </form>
     </div>
   </div>
