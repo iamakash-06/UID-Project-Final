@@ -1,12 +1,12 @@
-function ondance() {
+function ondance() { //to show the overlay
     document.getElementById("overlaydance").style.display = "block";
   }
   
-  function offdance() {
+  function offdance() { //to hide the overlay
     document.getElementById("overlaydance").style.display = "none";
   }
 
-  function onlit() {
+  function onlit() { //different functions to void overlap of displayed text
     document.getElementById("overlaylit").style.display = "block";
   }
   
