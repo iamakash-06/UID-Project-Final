@@ -21,7 +21,7 @@
   
                 <nav>
                     <br>
-                    <ul id="navbar">
+                    <ul id="navbar"> //Buttons for the navigation bar
   
                         <li id="btn2"><a href="index.html">Home</a></li>  
                         <li id="btn2"><a href="login.html">Login</a></li>  
@@ -32,7 +32,7 @@
                         <li ><a href="merch.html">Merchandise</a></li>
                         
                     </ul> 
-                    <div id="myNav" class="overlay">
+                    <div id="myNav" class="overlay"> //overlay with links to guidelines and schedule
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <div class="overlay-content">
                             <div id="trouble">
@@ -55,12 +55,12 @@
         <br>
         <br>
         <p id="title">Events</p>
-        <div class="flex-container">
+        <div class="flex-container"> //Flex boxes used for a neat and concise appearance
             <div class="content">
                 <br>Dance & Music<br>
                 <img src="Dance.png" alt="Dance and Music" width=160px height=160px>
                 <br>
-                <div id="overlaydance" onclick="offdance()">
+                <div id="overlaydance" onclick="offdance()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text">
                         ADAPT TUNES
                         <ul>
@@ -80,14 +80,14 @@
                         <br>
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=ondance()>
-                <input type="button" value="Register" class="button" onclick=registrationpage()>
+                <input type="button" value="Events" class="button" onclick=ondance()> //JS function to turn on the overlay upon clicking the button
+                <input type="button" value="Register" class="button" onclick=registrationpage()> 
             </div>
             <div class="content">
                 <br>Literary Events<br>
                 <img src="litevents.png" alt="debate" width=160px height=160px >
                 <br>
-                <div id="overlaylit" onclick="offlit()">
+                <div id="overlaylit" onclick="offlit()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text1">
                         SHIPWRECK
                         <ul>
@@ -115,14 +115,14 @@
                         <br>
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=onlit()>
+                <input type="button" value="Events" class="button" onclick=onlit()> //JS function to turn on the overlay upon the button
                 <input type="button" value="Register" class="button" onclick=registrationpage()>
             </div>
             <div class="content">
                 <br>Act It Out!<br>
                 <img src="TV.png" alt="TV" width=160px height=160px>
                 <br>
-                <div id="overlayact" onclick="offact()">
+                <div id="overlayact" onclick="offact()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text">
                         CHANNEL SURFING
                         <ul>
@@ -143,7 +143,7 @@
                         
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=onact()>
+                <input type="button" value="Events" class="button" onclick=onact()> //JS function to turn on the overlay upon clicking the button
                 <input type="button" value="Register" class="button" onclick=registrationpage()>
             </div>
         </div>
@@ -152,7 +152,7 @@
                 <br>Gaming & Sports<br>
                 <img src="streetcricket.jpg" alt="Dance and Music" width=160px height=160px>
                 <br>
-                <div id="overlaygame" onclick="offgame()">
+                <div id="overlaygame" onclick="offgame()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text">
                         EE SAALA CUP NAMDE
                         <ul>
@@ -170,14 +170,14 @@
                         <br>
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=ongame()>
+                <input type="button" value="Events" class="button" onclick=ongame()> //JS function to turn on the overlay upon clicking the button
                 <input type="button" value="Register" class="button" onclick=registrationpage()>
             </div>
             <div class="content">
                 <br>Photography<br>
                 <img src="camera.jpg" alt="Dance and Music" width=160px height=160px>
                 <br>
-                <div id="overlayphoto" onclick="offphoto()">
+                <div id="overlayphoto" onclick="offphoto()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text">
                         PHOTOGRAPHY
                         <ul>
@@ -188,14 +188,14 @@
                         <br>
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=onphoto()>
+                <input type="button" value="Events" class="button" onclick=onphoto()> //JS function to turn on the overlay upon clicking the button
                 <input type="button" value="Register" class="button" onclick=registrationpage()>
             </div>
             <div class="content">
                 <br>Winners' Event<br>
                 <img src="trophy.png" alt="Dance and Music" width=140px height=160px>
                 <br>
-                <div id="overlaywin" onclick="offwin()">
+                <div id="overlaywin" onclick="offwin()"> //JS function to turn off the overlay upon clicking anywhere on the screen
                     <div id="text">
                         WINNERS' EVENT
                         <ul>
@@ -206,7 +206,7 @@
                         <br>
                     </div>
                 </div>
-                <input type="button" value="Events" class="button" onclick=onwin()>
+                <input type="button" value="Events" class="button" onclick=onwin()> //JS function to turn on the overlay upon clicking the button
             </div>
     </div>
 
@@ -216,7 +216,7 @@
     
 </body>
 
-<footer class="footer">
+<footer class="footer"> //Footer created with svg
           <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
             <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
           </svg>
