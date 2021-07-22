@@ -1,4 +1,4 @@
-function ondance() { //to show the overlay
+function ondance() { //to show the overlay as a block
     document.getElementById("overlaydance").style.display = "block";
   }
   
@@ -6,11 +6,11 @@ function ondance() { //to show the overlay
     document.getElementById("overlaydance").style.display = "none";
   }
 
-  function onlit() { //different functions to void overlap of displayed text
+  function onlit() { //different functions to avoid overlap of displayed text
     document.getElementById("overlaylit").style.display = "block";
   }
   
-  function offlit() {
+  function offlit() { //different functions to avoid overlap of displayed text
     document.getElementById("overlaylit").style.display = "none";
   }
 
@@ -46,15 +46,15 @@ function ondance() { //to show the overlay
     document.getElementById("overlaywin").style.display = "none";
   }
 
-  function registrationpage(){
+  function registrationpage(){ //to open the linked page in a new window
     window.open("registration.html");
   }
 
-  function openNav() {
+  function openNav() { //to open overlay from left to right with animation
     document.getElementById("myNav").style.width = "100%";
   }  
 
-  function closeNav() {
+  function closeNav() { //to close overlay from left to right with animation
     document.getElementById("myNav").style.width = "0%";
   }
 
