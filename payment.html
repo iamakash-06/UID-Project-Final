@@ -6,19 +6,26 @@
 <script>
   function submitForm()
         { 
+          <!-- Function to check if the first name is null-->
           let x = document.forms["myForm"]["fname"].value;
+          <!-- Changes the border colour to red if found null -->
           document.forms["myForm"]["fname"].style.borderColor = "red";
           if (x == "") {
+          <!-- Alert message pop-up if first name is not filled -->
             window.alert("Name must be filled out");
             //return false;
           }
           else{
+          <!-- Changes the border colour to green indicating correct entry -->
             document.forms["myForm"]["fname"].style.borderColor = "green";
           }
+          <!-- Regex to check for a valid cvv -->
+          <!-- Limited to three numbers within the range 0 to 9 -->
           var cvv_no = /^[0-9]{3}$/;
           if(cvv.value.match(cvv_no)){
             
             document.myForm.target = "_blank";
+           <!-- Open paymentsuccess.html on successfull validation of the form -->
             window.open("paymentsuccess.html");
             document.myForm.submit();
           }
