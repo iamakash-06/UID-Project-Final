@@ -4,14 +4,14 @@ if (document.readyState == 'loading') {                                         
 } else {
     start();
 }
-function start(){
-    var quantityeb = document.getElementsByClassName('quantity');
+function start(){                                                               
+    var quantityeb = document.getElementsByClassName('quantity');               
     for (var i = 0; i < quantityeb.length; i++) {                           
         var input = quantityeb[i];
         input.addEventListener('change', quantityChanged);
     }
 }
-var nm = document.getElementById('name');
+var nm = document.getElementById('name');                                 //checks if name is filled
 nm.addEventListener('input', checkNm);
 function checkNm(){
   if(nm.value.length<1){
@@ -20,7 +20,7 @@ function checkNm(){
   }
 }
 
-var phno = document.getElementById('phno');
+var phno = document.getElementById('phno');                            //checks if phone number is a 10 digit number
 phno.addEventListener('input', checkPhNo);
 function checkPhNo(){
   if(isNaN(phno.value)|| phno.value.length>10){
@@ -28,7 +28,7 @@ function checkPhNo(){
     phno.value = "";
   }
 }
-var email = document.getElementById('email');  
+var email = document.getElementById('email');                          //checks if the entered id is a valid email id
 email.addEventListener('input', checkEmail);
 function checkEmail() {  
 
@@ -40,7 +40,7 @@ function checkEmail() {
       return false;  
   }  
 }   
-var submitButton = document.getElementById('btn');
+var submitButton = document.getElementById('btn');                     //displays message on submitting 
 submitButton.addEventListener('click', submitfn);
 function submitfn(){
   swal({
@@ -53,7 +53,7 @@ function submitfn(){
   
 }
 
-function quantityChanged(event) {                                              
+function quantityChanged(event) {                                               //checks if the quantity is greater than 0 and less than 200
     var input = event.target;
     if (isNaN(input.value) || input.value <= 0) {
             input.value = 0;
@@ -62,10 +62,10 @@ function quantityChanged(event) {
       swal("We appreciate your enthusiasm but we're limited on stock right now :/");
       input.value = 200;
     }
-    updateCartTotal();
+    updateTotal();
 }
-function updateCartTotal() {      
-    var tbl=document.getElementsByClassName('tbl')[0];                                                   //function to update card total after quantity is changed 
+function updateTotal() {      
+    var tbl=document.getElementsByClassName('tbl')[0];                                                   //function to update total after quantity is changed 
     var eb = tbl.getElementsByClassName('a1');
     var total = 0;
     for(var i=0; i<eb.length ; i++)
