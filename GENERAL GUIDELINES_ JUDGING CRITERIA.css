@@ -5,6 +5,7 @@ body {
     background-size: 100% 1250px;
     overflow-x: hidden;
 }
+//effects for the content of the page
 .div1 {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
@@ -53,6 +54,7 @@ h1:hover {
     display: table;
     clear: both;
 }
+//effects for the events buttons 
 .event {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -86,9 +88,11 @@ h1:hover {
 .btm:hover {
     background-color:rgba(0, 0, 0, 0.7)
 }
+// event content display initially set to none (can be changed by the user on clicking event name (done using JS))
 .eventContent{
     display:none;
 }
+//enhancement for the three buttons on the right of the screen
 #mySidenav a {
 position: absolute;
 margin-top: 100px;
@@ -122,6 +126,8 @@ background-color: #f44336;
 top: 225px;
 background-color: #555
 }
+
+//effects for the navigation bar
 .logo{
 
 padding-top: 3px;
@@ -221,6 +227,7 @@ height: 30px;
 a{
     color: inherit;
     }
+//effects for the footer 
     .pg-footer {
         font-family: 'Roboto', sans-serif;
       }
@@ -526,6 +533,7 @@ a{
           height: 30px;
           width: auto;
       }
+// overlay effect on clicking 'events' in the navigation bar
       .overlay {
         height: 100%;
         width: 0;
@@ -575,6 +583,7 @@ a{
         right: 35px;
         }
         }
+// close icon on the screen overlay 
         .closebtn{
             color: white;
         }
